@@ -7,7 +7,23 @@
 }
 
 html {
-    font-size: 62.5%;    
+    font-size: 62.5%;
+    
+    @include responsive(tablet-landscape) {
+      font-size: 52%;
+    }
+
+    @include responsive(tablet-portrait) {
+      font-size: 45%;
+    }
+    @include responsive(tablet-portrait-ios) {
+      font-size: 40%;
+    }
+    
+    @include responsive(phone) {
+      font-size: 30%;
+    }
+
 }
 
 body {

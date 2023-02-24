@@ -8,13 +8,52 @@
         position: absolute;
         top: 1rem;       
         padding-right: 10rem;
+        transform: translateX(-15rem);
+
+        
+        @include responsive(tablet-landscape) {
+            top: 10rem;
+            transform: translateX(0);
+        };
+
+        @include responsive(tablet-portrait) {
+            top: 2rem;
+            left: 60%;
+            transform: translateX(-50%);
+        }
+
+        @include responsive(tablet-portrait-ios) {
+            top: 10rem;           
+            left: 60%;
+            transform: translateX(-50%);
+        }
+
+        @include responsive(phone) {
+            left: 55%;
+            top: 12rem;
+        }
+
+        @include responsive(phone-ios) {
+            left: 60%;
+            top: 8rem;
+        }
 
         &__background {
             display: inline-block;
-            width: 30rem;
-            height: 30rem;
+            width: 40rem;
+            height: 40rem;
             border-radius: 50%;        
-            background-color: $color-secondary;           
+            background-color: $color-secondary;
+            
+            @include responsive(phone) {
+                width: 50rem;
+                height: 50rem;
+            }
+
+            @include responsive(phone-ios) {
+                width: 30rem;
+                height: 30rem;
+            }
         }
         
         & > img {
@@ -35,5 +74,24 @@
         width: 40rem;
         display: flex;
         justify-content: space-around;
+
+        @include responsive(tablet-portrait) {
+            width: 50%;
+            padding: 8rem 0 10rem 0;
+        }
+
+        @include responsive(tablet-portrait-ios) {           
+            padding: 11rem 0 10rem 0;
+        }
+
+        @include responsive(phone) {
+            width: 70%;
+            padding: 18rem 0 18rem 0;
+        }
+
+        @include responsive(phone-ios) {
+            width: 80%;
+            padding: 8rem 0 5rem 0;
+        }
     }
 }

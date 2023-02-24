@@ -8,6 +8,10 @@ body {
         white-space: pre-wrap;     
         font-family: 'Paytone One', sans-serif;
         line-height: 12rem;
+
+        @include responsive(tablet-portrait-ios) {
+            line-height: 8rem;           
+        }
         
         & > span {
             display: inline-block;       
@@ -17,18 +21,94 @@ body {
             line-height: 0;
             font-size: 10rem;
             color: rgba($color-white, .9);
+
+            @include responsive(tablet-portrait) {
+                font-size: 7rem;
+            }
+
+            @include responsive(tablet-portrait-ios) {
+                letter-spacing: -.4rem;
+            }
+
+            @include responsive(phone) {
+                font-size: 6rem;
+            }
+
+            @include responsive(phone-ios) {
+                letter-spacing: -.1rem;
+            }
         }
 
         & span:first-child {
             position: absolute;
             top: -1rem;
             left: 8rem;
+
+            @include responsive(tablet-portrait) {
+                top: 1rem;
+                left: 10rem;
+            }
+
+            @include responsive(tablet-portrait-ios) {
+                font-size: 10rem;
+                top: .4rem;
+                left: 9.5rem;
+            }
+
+            @include responsive(phone) {
+                font-size: 8rem;
+                top: 0;
+                left: 8rem;
+            }
+
+            @include responsive(phone-ios) {
+                font-size: 7rem;
+                top: 0;
+                left: 4.5rem;
+            }
+        }
+
+        & span:last-child {
+
+            @include responsive(tablet-portrait) {
+                font-size: 5rem;
+            }
+
+            @include responsive(tablet-portrait-ios) {
+                font-size: 7.5rem;
+            }
+
+            @include responsive(phone) {
+                font-size: 5rem;
+            }
         }
 
         & span:nth-child(2), span:nth-child(3) {        
             font-size: 16rem;
             letter-spacing: -.3rem;
-            color: $color-secondary;        
+            color: $color-secondary;
+
+            @include responsive(tablet-portrait) {
+                font-size: 15rem;
+                letter-spacing: -.4rem;
+            }
+            
+            @include responsive(tablet-portrait-ios) {
+                font-size: 20rem;
+                letter-spacing: -.8rem;
+                line-height: 10rem;
+            }
+         
+            @include responsive(phone) {
+                font-size: 15rem;
+                line-height: 11rem;
+                letter-spacing: -.7rem;
+            }
+
+            @include responsive(phone-ios) {
+                font-size: 14rem;
+                line-height: 5.6rem;
+            }            
         }
         
         & span:nth-child(2) {

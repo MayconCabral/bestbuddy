@@ -3,15 +3,23 @@
         @media (max-width: 37.5em) { @content }; 
     }
 
-    @if $breakpoint == tablet-portrait {
-        @media (max-width: 56.25em) { @content }; 
+    @if $breakpoint == phone-ios {
+        @media (max-device-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2) { @content };
+    }  
+
+    @if $breakpoint == tablet-portrait-ios {
+        @media (max-device-width: 56.25em) and (-webkit-min-device-pixel-ratio: 2) { @content }; 
     }
+
+    @if $breakpoint == tablet-portrait {
+        @media (max-width: 56.25em) { @content };
+    }   
 
     @if $breakpoint == tablet-landscape {
         @media (max-width: 75em) { @content }; 
     }
 
     @if $breakpoint == big-desktop {
-        @media (min-width: 112.5) { @content };
+        @media (min-width: 112.5em) { @content };
     }
 }
