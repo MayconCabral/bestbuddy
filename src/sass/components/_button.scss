@@ -33,6 +33,12 @@
         color: $color-primary;
     }
 
+    &-secondary {
+        border-color: $color-primary;
+        background-color: $color-secondary;
+        color: $color-primary;
+    }
+
     &-tertiary {
         border-color: $color-secondary;
         background-color: $color-primary;

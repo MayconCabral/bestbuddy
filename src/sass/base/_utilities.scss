@@ -8,5 +8,14 @@
     @include responsive(phone-android) {
         padding-bottom: 30rem;
       }
+
+    
+      &-gallery {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
    
 }
