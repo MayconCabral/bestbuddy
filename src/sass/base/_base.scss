@@ -24,6 +24,18 @@ html {
       font-size: 30%;
     }
 
+    @include responsive(phone-android) {
+      font-size: 30%;
+    }
+    
+    
+    @include responsive(phone-landscape-ios) {
+      font-size: 32%;
+    }
+    
+    @include responsive(phone-landscape-android) {
+      font-size: 30%;
+    }
 }
 
 body {

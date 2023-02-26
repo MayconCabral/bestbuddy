@@ -1,23 +1,40 @@
 @mixin responsive($breakpoint) {
+
     @if $breakpoint == phone {
         @media (max-width: 37.5em) { @content }; 
+    } //desktop and mobiles googleChrome... 
+
+    @if $breakpoint == phone-android {
+        @media (max-device-width: 37.5em) and (pointer: coarse) and (not (pointer: fine)) { @content }; 
+    }
+
+    @if $breakpoint == phone-landscape-android {
+        @media (min-device-width: 37.5em) and (pointer: coarse) and (orientation: landscape) and (not (pointer: fine)) { @content }; 
     }
 
     @if $breakpoint == phone-ios {
-        @media (max-device-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2) { @content };
+        @media (max-device-width: 37.5em) and (-webkit-min-device-pixel-ratio: 1) { @content };
+    }
+
+    @if $breakpoint == phone-landscape-ios {
+        @media (max-device-width: 37.5em) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) { @content };
     }  
 
     @if $breakpoint == tablet-portrait-ios {
-        @media (max-device-width: 56.25em) and (-webkit-min-device-pixel-ratio: 2) { @content }; 
+        @media (max-device-width: 56.25em) and (-webkit-min-device-pixel-ratio: 1) { @content }; 
+    }
+
+    @if $breakpoint == tablet-landscape-ios {
+        @media (max-device-width: 56.25em) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) { @content }; 
     }
 
     @if $breakpoint == tablet-portrait {
         @media (max-width: 56.25em) { @content };
-    }   
+    } // desktop and mobiles with googleChrome
 
     @if $breakpoint == tablet-landscape {
         @media (max-width: 75em) { @content }; 
-    }
+    } // desktop and mobiles with googleChrome
 
     @if $breakpoint == big-desktop {
         @media (min-width: 112.5em) { @content };

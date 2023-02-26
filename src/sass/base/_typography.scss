@@ -66,6 +66,15 @@ body {
                 top: 0;
                 left: 4.5rem;
             }
+
+            @include responsive(phone-android) {
+                left: 8rem;
+              }
+
+              @include responsive(phone-landscape-android) {
+                top: 0;
+                left: 12rem;
+              }
         }
 
         & span:last-child {
@@ -108,7 +117,15 @@ body {
             @include responsive(phone-ios) {
                 font-size: 14rem;
                 line-height: 5.6rem;
-            }            
+            }
+            
+            @include responsive(phone-android) {
+                line-height: 11rem;
+              }
+
+              @include responsive(phone-landscape-android) {
+                line-height: 15rem;
+              }
         }
         
         & span:nth-child(2) {

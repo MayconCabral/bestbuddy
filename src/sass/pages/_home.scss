@@ -22,21 +22,38 @@
             transform: translateX(-50%);
         }
 
+        
         @include responsive(tablet-portrait-ios) {
             top: 10rem;           
             left: 60%;
             transform: translateX(-50%);
         }
+        
+        @include responsive(tablet-landscape-ios) {
+            top: 4rem;           
+            left: 70%;
+            transform: translateX(-50%);
+        }
 
         @include responsive(phone) {
-            left: 55%;
             top: 12rem;
+            left: 55%;
         }
 
         @include responsive(phone-ios) {
-            left: 60%;
             top: 8rem;
+            left: 60%;
         }
+
+        @include responsive(phone-android) {
+            top: 10rem;
+            left: 55%;
+          }
+
+        @include responsive(phone-landscape-ios) {
+            top: 4rem;
+            left: 80%;
+          }
 
         &__background {
             display: inline-block;
@@ -54,6 +71,11 @@
                 width: 30rem;
                 height: 30rem;
             }
+
+            @include responsive(phone-android) {
+                width: 45rem;
+                height: 45rem;
+              }
         }
         
         & > img {
@@ -65,7 +87,11 @@
     }
 
     &__header {
-        align-self: center;       
+        align-self: center;
+        
+        @include responsive(phone-landscape-ios) {
+            align-self: flex-start;
+          }
     }
     
     &__nav {
@@ -84,14 +110,34 @@
             padding: 11rem 0 10rem 0;
         }
 
+        @include responsive(tablet-landscape-ios) {
+            padding: 5rem 0 8rem 0;
+        }    
+
         @include responsive(phone) {
             width: 70%;
             padding: 18rem 0 18rem 0;
         }
 
+        
         @include responsive(phone-ios) {
             width: 80%;
             padding: 8rem 0 5rem 0;
         }
-    }
+        
+        @include responsive(phone-android) {
+            padding-top: 15rem;
+          }
+
+        @include responsive(phone-landscape-ios) {
+            align-self: flex-start;
+            width: 50%;
+            padding: 3rem 0rem 2rem 5rem;
+          }
+
+        @include responsive(phone-landscape-android) {
+            padding: 8rem 0rem 8rem 5rem;
+        }
+
+        }
 }

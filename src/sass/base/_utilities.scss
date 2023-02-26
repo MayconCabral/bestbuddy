@@ -3,5 +3,10 @@
     justify-content: flex-end;
     height: 100%;
     align-items: flex-end;
-    flex-direction: column;    
+    flex-direction: column;
+    
+    @include responsive(phone-android) {
+        padding-bottom: 30rem;
+      }
+   
 }
