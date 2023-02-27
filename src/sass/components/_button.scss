@@ -1,14 +1,7 @@
-.btn {
+.btn {    
     &:link,
     &:visited {
-        text-decoration: none;
-        text-transform: uppercase;
-        padding: 1.5rem 3rem;
-        font-size: 1.4rem;
-        font-weight: 500;   
-        border-radius: 50rem;
-        border-width: 5px;
-        border-style: solid;
+        @include btn;
 
         @include responsive(tablet-landscape) {
             font-size: 1.7rem;
@@ -28,20 +21,14 @@
     }
 
     &-primary {
-        border-color: $color-white;
-        background-color: $color-secondary;
-        color: $color-primary;
+        @include primary-btn
     }
 
     &-secondary {
-        border-color: $color-primary;
-        background-color: $color-secondary;
-        color: $color-primary;
+        @include secondary-btn
     }
 
     &-tertiary {
-        border-color: $color-secondary;
-        background-color: $color-primary;
-        color: $color-secondary;
+        @include terciary-btn
     }
 }

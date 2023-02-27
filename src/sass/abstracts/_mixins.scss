@@ -1,3 +1,33 @@
+@mixin btn {    
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1.5rem 3rem;
+        font-size: 1.4rem;
+        font-weight: 500;   
+        border-radius: 50rem;
+        border-width: 5px;
+        border-style: solid;    
+}
+
+@mixin primary-btn {
+    border-color: $color-white;
+    background-color: $color-secondary;
+    color: $color-primary;
+}
+
+@mixin secondary-btn {
+    border-color: $color-primary;
+    background-color: $color-secondary;
+    color: $color-primary;
+}
+
+@mixin terciary-btn {
+    border-color: $color-secondary;
+    background-color: $color-primary;
+    color: $color-secondary;
+}
+
+
 @mixin responsive($breakpoint) {
 
     @if $breakpoint == phone {

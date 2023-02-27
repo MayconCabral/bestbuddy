@@ -30,7 +30,13 @@
         }
     }
 
-    &__nav {
-        padding-top: 10rem;
-    }
+   &__nav {
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1rem;
+           
+   }
 }
