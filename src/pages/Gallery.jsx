@@ -1,32 +1,9 @@
-import { useState, useEffect } from 'react';
+import  useResizeWindow  from '../hooks/useResizeWindow';
 import Cards from '../components/Cards';
 import Button from '../components/Button';
 
 export default function Gallery() {
-    const [viewport, setViewport] = useState(
-        {
-            width: window.innerWidth,
-            height: window.innerHeight,
-        }
-    );
-
-    const isMobile = viewport.width <= 850;
-        
-    const handleResize = () => {
-        setViewport(
-            { 
-                width: window.innerWidth,
-                height: window.innerHeight
-            }
-        );
-    }
-
-    useEffect(() => {
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-
-    }, []);
+    const isMobile = useResizeWindow();
     
     return (
        <main className='gallery'>
