@@ -27,6 +27,14 @@
                 aspect-ratio: 1;
                 border-radius: 1rem;        
             }
+
+            @include responsive(desktop-4-pictures) {
+                max-width: 25rem;
+            }
+            
+            @include responsive(phone) {
+                max-width: 35rem;
+            }
         }
     }
 
@@ -37,6 +45,10 @@
         justify-content: space-between;
         align-items: center;
         padding-top: 1rem;
+
+        @include responsive(desktop-4-pictures) {
+            padding-top: 0;
+        }
            
    }
 }

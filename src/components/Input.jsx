@@ -19,7 +19,7 @@ export default function Input() {
                   { id: 'Strawberry', value: 'Strawberry' },                 
                 ]}
             />
-            <a href='' className='gallery__nav__input-btn'>find pictures</a>
+            <a href='javascript:void(0)' className='gallery__nav__input-btn'>find pictures</a>
         </div>
     )
 };
