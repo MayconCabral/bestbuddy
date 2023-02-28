@@ -21,7 +21,8 @@
         &__textbox {           
             position: relative;
             font-family: inherit;
-            padding: 1.5rem 2rem;
+            text-align: center;
+            padding: 1.5rem 0;
             border: 5px solid $color-primary;                
             border-radius: 50rem;
             background-color: rgba($color-white, .9);
@@ -52,16 +53,29 @@
             }
             
             &[type=text] {
+                width: 24rem;
                 font-family: inherit;
                 text-transform: uppercase;
                 color: $color-primary;
-            }
-            
+                
+                @include responsive(tablet-landscape) {
+                    width: 28rem;
+                }
+
+                @include responsive(tablet-portrait) {
+                    width: 32rem;
+                }
+
+                @include responsive(phone) {
+                    font-size: 2.2rem;
+                    width: 40rem;
+                }
+            }            
         }
 
         &__listbox {                       
             max-height: 10rem;
-            width: 90%;
+            width: 100%;
             background-color: rgba($color-secondary, .9);                
             border-bottom: none;
             border-radius: 3rem 3rem .2rem .2rem;
@@ -94,9 +108,9 @@
                 text-align: center;                   
                 color: $color-primary;
                 font-family: inherit;
-                font-size: 1.4rem;
+                font-size: 1.3rem;
                 text-transform: uppercase;
-                padding: 1rem 0;
+                padding: .5rem 0;
                 transition: all .4s;
 
                 &:hover {
@@ -124,7 +138,10 @@
 
             &::-webkit-scrollbar {
                 visibility: hidden;          
-            }             
+            }
+            &::-webkit-scrollbar-corner {
+                visibility: hidden;
+            }         
         }        
     }
 

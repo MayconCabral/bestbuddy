@@ -1,25 +1,50 @@
-import DatalistInput, { startsWithValueFilter } from "react-datalist-input"
+import { useState, useContext } from "react";
+import Context from "../context/Context";
+import useBreedPictureAPI from "../hooks/useBreedPictureAPI";
+import useListBreedsAPI from "../hooks/useListBreedsAPI";
+import useResizeWindow from "../hooks/useResizeWindow";
+
+import DatalistInput, { startsWithValueFilter } from "react-datalist-input";
 
 export default function Input() {
+    const [selectBreed, setSelectBreed] = useState('');
+    const { dogPicturesCONTEXT, nextPicturesCONTEXT, setNextPicturesCONTEXT } = useContext(Context);
+    const listBreeds = useListBreedsAPI();
+    useBreedPictureAPI(selectBreed);
+    
+    const width = useResizeWindow();
+
+    const displayCards = () => {
+        if (width <= 683) return 4;
+        if (width <= 900) return 6;
+        if (width <= 1232) return 10;
+        if (width >= 900) return 12;
+    }
+
+    const handleSelectBreed = (event) => {
+        const addHifen = event.value.replace(/ /g, '/')        
+        setSelectBreed(addHifen)
+    }
+    
+    const nextPicture = (event) => {
+        event.preventDefault();
+        setNextPicturesCONTEXT(nextPicturesCONTEXT + displayCards());        
+        
+        console.log(nextPicturesCONTEXT, dogPicturesCONTEXT.length)
+        if (nextPicturesCONTEXT >= dogPicturesCONTEXT.length) {            
+            setNextPicturesCONTEXT(displayCards());
+        }
+    }
+    
     return (
         <div className="gallery__nav__input">
             <DatalistInput
                 placeholder="Type a breed here."                
-                onSelect={(item) => console.log(item.value)}
+                onSelect={handleSelectBreed}
                 filters={[startsWithValueFilter]}               
-                items={[
-                  { id: 'Chocolate', value: 'type a breed here' },
-                  { id: 'Coconut', value: 'Coconut' },
-                  { id: 'Mint', value: 'Mint' },
-                  { id: 'Strawberry', value: 'Strawberry' },
-                  { id: 'Vanilla', value: 'Vanilla' },
-                  { id: 'Chocolate', value: 'Chocolate' },
-                  { id: 'Coconut', value: 'Coconut' },
-                  { id: 'Mint', value: 'Mint' },
-                  { id: 'Strawberry', value: 'Strawberry' },                 
-                ]}
+                items={listBreeds}
             />
-            <a href='javascript:void(0)' className='gallery__nav__input-btn'>find pictures</a>
+            <a href='' className='gallery__nav__input-btn' onClick={nextPicture}>more !</a>
         </div>
     )
 };
