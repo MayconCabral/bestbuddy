@@ -29,8 +29,7 @@ export default function Input() {
     const nextPicture = (event) => {
         event.preventDefault();
         setNextPicturesCONTEXT(nextPicturesCONTEXT + displayCards());        
-        
-        console.log(nextPicturesCONTEXT, dogPicturesCONTEXT.length)
+       
         if (nextPicturesCONTEXT >= dogPicturesCONTEXT.length) {            
             setNextPicturesCONTEXT(displayCards());
         }

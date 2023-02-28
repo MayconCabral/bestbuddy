@@ -36,6 +36,14 @@
                 max-width: 35rem;
             }
 
+            @include responsive(phone-ios) {
+                max-width: 18rem;
+            }
+
+            @include responsive(phone-landscape-ios) {
+                max-width: 12rem;
+            }
+
             & > img {
                 width: 100%;
                 height: 100%;
@@ -50,11 +58,10 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        align-items: center;        
+        align-items: center;     
 
-        @include responsive(desktop-4-pictures) {
-            padding-top: 0;
-        }
-           
+        @include responsive(tablet-landscape-ios) {
+           justify-content: space-evenly;
+        }           
    }
 }

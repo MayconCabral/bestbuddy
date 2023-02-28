@@ -15,6 +15,22 @@
         grid-template-rows: 8vh 67vh 25vh;
         justify-items: center;
 
+        @include responsive(tablet-portrait-ios) {
+          grid-template-rows: 4vh 67vh 25vh;
+        }
+
+        @include responsive(tablet-landscape-ios) {
+          grid-template-rows: 2vh 67vh 25vh;
+        }
+
+        @include responsive(phone-ios) {
+          grid-template-rows: 0vh 67vh 20vh;
+        }
+
+        @include responsive(phone-landscape-ios) {
+          grid-template-rows: 0vh 50vh 40vh;
+      }
+
       }
    
 }

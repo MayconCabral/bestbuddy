@@ -18,6 +18,11 @@
         @include responsive(phone) {
             font-size: 3rem;
         }
+
+        @include responsive(phone-landscape-ios) {
+            font-size: 1.5rem;
+        }
+        
     }
 
     &-primary {

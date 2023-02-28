@@ -70,6 +70,10 @@
                     font-size: 2.2rem;
                     width: 40rem;
                 }
+
+                @include responsive(phone-ios) {
+                    width: 20rem;
+                }
             }            
         }
 
