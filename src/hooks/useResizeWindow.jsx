@@ -22,8 +22,7 @@ export default function useResizeWindow() {
         handleResize();
         return () => window.removeEventListener('resize', handleResize);
         
-    }, []);
-        
-    const isMobile = viewport.width <= 850;    
-    return isMobile;
+    }, []);        
+   
+    return viewport.width;
 }

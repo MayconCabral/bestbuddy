@@ -11,11 +11,10 @@
 
     
       &-gallery {
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        display: grid;        
+        grid-template-rows: 8vh 67vh 25vh;
+        justify-items: center;
+
       }
    
 }

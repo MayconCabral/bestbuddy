@@ -4,7 +4,14 @@ import Button from '../components/Button';
 import Input from '../components/Input';
 
 export default function Gallery() {
-    const isMobile = useResizeWindow();
+    const width = useResizeWindow();
+
+    const displayCards = () => {
+        if (width <= 683) return 4;
+        if (width <= 900) return 6;
+        if (width <= 1232) return 10;
+        if (width >= 900) return 12;
+    }
     
     return (
        <main className='gallery'>
@@ -21,8 +28,18 @@ export default function Gallery() {
                     { img: 'https://images.dog.ceo/breeds/rottweiler/n02106550_10481.jpg?w=164&fit=crop&auto=format'}, 
                     { img: 'https://images.dog.ceo/breeds/retriever-chesapeake/n02099849_2375.jpg?w=164&fit=crop&auto=format'}, 
                     { img: 'https://images.dog.ceo/breeds/retriever-chesapeake/n02099849_2416.jpg?w=164&fit=crop&auto=format'},
+                    { img: 'https://images.dog.ceo/breeds/pug/n02110958_13812.jpg?w=164&fit=crop&auto=format'},
+                    { img: 'https://images.dog.ceo/breeds/borzoi/n02090622_10281.jpg?w=164&fit=crop&auto=format'}, 
+                    { img: 'https://images.dog.ceo/breeds/borzoi/n02090622_6094.jpg?w=164&fit=crop&auto=format'}, 
+                    { img: 'https://images.dog.ceo/breeds/bullterrier-staffordshire/20200820_131119.jpg?w=164&fit=crop&auto=format'},
+                    { img: 'https://images.dog.ceo/breeds/bullterrier-staffordshire/n02093256_11569.jpg?w=164&fit=crop&auto=format'}, 
+                    { img: 'https://images.dog.ceo/breeds/bullterrier-staffordshire/n02093256_1505.jpg?w=164&fit=crop&auto=format'}, 
+                    { img: 'https://images.dog.ceo/breeds/clumber/n02101556_2362.jpg?w=164&fit=crop&auto=format'},
+                    { img: 'https://images.dog.ceo/breeds/rottweiler/n02106550_10481.jpg?w=164&fit=crop&auto=format'}, 
+                    { img: 'https://images.dog.ceo/breeds/retriever-chesapeake/n02099849_2375.jpg?w=164&fit=crop&auto=format'}, 
+                    { img: 'https://images.dog.ceo/breeds/retriever-chesapeake/n02099849_2416.jpg?w=164&fit=crop&auto=format'},
                     { img: 'https://images.dog.ceo/breeds/pug/n02110958_13812.jpg?w=164&fit=crop&auto=format'}
-                    ].slice(0, isMobile ? 4 : 10 ).map((i, index) => (
+                    ].slice(0, displayCards() ).map((i, index) => (
                         <Cards img={i.img} key={index}/>
                     ))
                    }
