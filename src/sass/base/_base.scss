@@ -7,7 +7,7 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5%;   
     
     @include responsive(tablet-landscape) {
       font-size: 52%;

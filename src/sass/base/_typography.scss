@@ -138,8 +138,32 @@ body {
     &__title {
         position: absolute;
         top: 45%;
-        right: 20%;       
+        right: 15%;       
         font-family: 'Paytone One', sans-serif;
+
+        @include responsive(tablet-portrait) {
+            top: 32%;
+            right: 15%;
+        }
+        
+        @include responsive(tablet-portrait-ios) {
+            top: 40%;
+            left: 15%;
+        }
+        
+        @include responsive(tablet-landscape-ios) {
+            left: 32%;
+        }
+
+        @include responsive(phone-ios) {
+            width: 100%;
+            left: 5%;
+        }
+
+        @include responsive(phone-landscape-ios) {
+             top: 30%;
+             left: 30%;   
+        }
 
         &__name {
             position: absolute;
@@ -147,20 +171,94 @@ body {
             left: 12%;
             font-size: 6rem;
             color: rgba($color-white, .9);
+
+            @include responsive(tablet-portrait) {
+                top: -25%;
+                left: 22%;
+                font-size: 5rem;
+            }            
+            
+            @include responsive(tablet-portrait-ios) {
+                left: 18%;
+                font-size: 6.5rem;
+            }
+
+            @include responsive(tablet-landscape-ios) {
+                left: 12%;
+                font-size: 7rem;
+            }
+
+            @include responsive(phone-ios) {
+                left: 15%;
+                font-size: 6rem;
+            }
+
+            @include responsive(phone-landscape-ios) {
+                font-size: 5rem;
+                left: 8%;
+            }
+            
         }
         &__front {
             font-size: 12rem;
             color: $color-secondary;
+
+            @include responsive(tablet-portrait) {
+               font-size: 14rem;
+            }
+
+            @include responsive(tablet-portrait-ios) {
+                font-size: 15rem;
+            }
+
+            @include responsive(tablet-landscape-ios) {
+                font-size: 14rem;
+            }
+
+            @include responsive(phone-ios) {
+                font-size: 14rem;
+            }
+
+            @include responsive(phone-landscape-ios) {
+                font-size: 12rem;
+            }
+
         }
         &__dev {
             position: absolute;
             bottom: -20%;
             left: .4%;
-            font-family: 'Lato';
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
             color: rgba($color-white, .9);
             text-transform: uppercase;
             font-size: 5.5rem;
             letter-spacing: 3.7rem;
+
+            @include responsive(tablet-portrait) {
+                font-size: 6.5rem;
+                font-weight: 300;
+                letter-spacing: 4.2rem;
+            }
+
+            @include responsive(tablet-portrait-ios) {
+                font-size: 6.2rem;
+            }
+            
+            @include responsive(tablet-landscape-ios) {
+                font-size: 6.3rem;
+            }
+
+            @include responsive(phone-ios) {
+                font-size: 5.5rem;
+                letter-spacing: 3rem;
+            }
+
+            @include responsive(phone-landscape-ios) {
+                font-size: 4.5rem;
+                letter-spacing: 2.8rem;
+            }
+            
         }
     }    
 }

@@ -8,8 +8,41 @@
         right: 2%;
         top: -5%;
 
+        @include responsive(tablet-portrait-ios) {
+            right: -4%;
+            top: 5%;
+        }
+
+        @include responsive(tablet-landscape-ios) {
+            top: -5%;
+            right: 0;
+        }
+
+        @include responsive(phone){
+            top: 5%;
+            right: 0;
+        }
+
+        @include responsive(phone-ios) {
+            top: 8%;
+            right: -4%;
+        }
+
+        @include responsive(phone-landscape-ios) {
+                top: -5%;
+                right: 8%;
+        }
+
         &__picture {
             width: 40rem;
+
+            @include responsive(phone-ios) {
+                width: 28rem;
+            }
+
+            @include responsive(phone-landscape-ios) {
+                width: 23rem;
+            }
         }
     }
 
@@ -27,6 +60,21 @@
             background-color: $color-secondary;
             border-radius: 100%;
             z-index: 1;
+
+            @include responsive(tablet-landscape) {
+                left: -55%;
+                top: -5%;
+            }
+
+            @include responsive(tablet-portrait) {
+                left: -60%;
+                top: 0;
+            }
+
+            @include responsive(phone-ios) {
+                left: -70%;
+                top: 10%;
+            }
         }
 
         &__picture {
@@ -36,17 +84,74 @@
             width: 50rem;
             z-index: 10;
             transform: rotate(15deg);
+
+            @include responsive(tablet-portrait-ios) {
+                transform: rotate(0deg);
+            }
+
+            @include responsive(phone) {
+                transform: rotate(0deg);
+            }
+
+            @include responsive(phone-ios) {
+                width: 32rem;
+                transform: rotate(-5deg);
+            }
+
+            @include responsive(phone-landscape-ios) {
+                transform: rotate(15deg);
+            }
         }
     }
 
     &__nav {
         position: absolute;
-        left: 60%;
+        left: 65%;
         column-gap: 5rem;
         bottom: 5%;      
         display: flex;
         z-index: 30;
         transform: translateX(-50%);
+
+        @include responsive(tablet-portrait) {
+            justify-content: flex-end;
+            width: 100%;
+            left: 40%;
+        }
+
+        @include responsive(tablet-portrait-ios) {
+            left: 48%;
+        }
+
+        @include responsive(tablet-landscape-ios) {
+            width: 100%;
+            left: 105%;
+        }
+
+        @include responsive(phone) {
+            width: 90%;
+            bottom: 3%;
+            row-gap: 8rem;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: flex-end;
+        }
+
+        @include responsive(phone-ios) {
+               row-gap: 3rem; 
+        }
+
+        @include responsive(phone-landscape-ios) {
+            width: 100%;           
+            left: 20%;
+            bottom: 5%;          
+            column-gap: 8rem;                 
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
+            align-items: flex-end;
+        }
     }
 }
 
