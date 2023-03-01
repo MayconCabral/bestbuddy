@@ -1,0 +1,52 @@
+.developer {
+    height: 100vh;
+    height: 100dvh;
+    background-color: $color-primary;
+    
+    &__bestbuddy {
+        position: absolute;
+        right: 2%;
+        top: -5%;
+
+        &__picture {
+            width: 40rem;
+        }
+    }
+
+    &__author {
+        position: absolute;
+        bottom: 0;
+        left: 0;        
+
+        &__background {
+            position: absolute;
+            left: -45%;
+            top: -10%;        
+            height: 200%;
+            width: 150%;
+            background-color: $color-secondary;
+            border-radius: 100%;
+            z-index: 1;
+        }
+
+        &__picture {
+            position: relative;
+            top: 5rem;
+            right: 5rem;
+            width: 50rem;
+            z-index: 10;
+            transform: rotate(15deg);
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        left: 60%;
+        column-gap: 5rem;
+        bottom: 5%;      
+        display: flex;
+        z-index: 30;
+        transform: translateX(-50%);
+    }
+}
+

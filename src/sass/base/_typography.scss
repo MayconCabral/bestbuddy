@@ -133,3 +133,34 @@ body {
         }
     }    
 }
+
+.developer {    
+    &__title {
+        position: absolute;
+        top: 45%;
+        right: 20%;       
+        font-family: 'Paytone One', sans-serif;
+
+        &__name {
+            position: absolute;
+            top: -35%;
+            left: 12%;
+            font-size: 6rem;
+            color: rgba($color-white, .9);
+        }
+        &__front {
+            font-size: 12rem;
+            color: $color-secondary;
+        }
+        &__dev {
+            position: absolute;
+            bottom: -20%;
+            left: .4%;
+            font-family: 'Lato';
+            color: rgba($color-white, .9);
+            text-transform: uppercase;
+            font-size: 5.5rem;
+            letter-spacing: 3.7rem;
+        }
+    }    
+}
