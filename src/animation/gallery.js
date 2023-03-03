@@ -7,7 +7,7 @@ export const wave = {
     opacity: 1,          
     x: '-100vw',
     transition: {
-      duration: 2
+      duration: 1
     }
   },
   exit: {
@@ -27,7 +27,7 @@ export const cards = {
     x: 0,
     transition: {
         duration: 1,
-        delay: 2        
+        delay: 1.2        
     }
   },
   exit: {

@@ -2,6 +2,17 @@
     height: 100vh;
     height: 100dvh;
     background-color: $color-primary;
+
+    &__fade-in {
+        @include fade;
+        right: 0;
+        background-color: $color-secondary;
+    }
+    &__fade-out {
+        @include fade;
+        right: 0;
+        background-color: $color-primary;        
+    }
     
     &__bestbuddy {
         position: absolute;

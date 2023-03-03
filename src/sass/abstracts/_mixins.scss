@@ -1,3 +1,14 @@
+@mixin fade {
+    height: 100vh;
+    width: 100vw;    
+    position: absolute;
+    top: 0;
+    z-index: 200;
+}
+
+
+
+
 @mixin btn {    
         text-decoration: none;
         text-transform: uppercase;
