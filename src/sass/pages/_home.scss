@@ -2,14 +2,23 @@
     position: relative;
     height: 100vh;
     height: 100dvh; 
-    background-color: $color-primary;
+    background-color: $color-primary;    
+
+    &__scale {
+        width: 5rem;
+        height: 5rem;
+        background-color: $color-secondary;
+        border-radius: 100%;
+        position: absolute;
+        top: 25vh; 
+        right: 30vw;
+    }
 
     &__logo {        
-        position: absolute;
+        position: fixed;
         top: 1rem;       
         padding-right: 10rem;
-        transform: translateX(-15rem);
-
+        transform: translateX(-25%);        
         
         @include responsive(tablet-landscape) {
             top: 10rem;
@@ -19,7 +28,7 @@
         @include responsive(tablet-portrait) {
             top: 2rem;
             left: 60%;
-            transform: translateX(-50%);
+            transform: translateX(-50%);          
         }
 
         
@@ -37,12 +46,12 @@
 
         @include responsive(phone) {
             top: 12rem;
-            left: 55%;
+            left: 55%;            
         }
 
         @include responsive(phone-ios) {
             top: 8rem;
-            left: 60%;
+            left: 60%;            
         }
 
         @include responsive(phone-android) {
@@ -56,11 +65,12 @@
           }
 
         &__background {
+            position: relative;
             display: inline-block;
             width: 40rem;
             height: 40rem;
             border-radius: 50%;        
-            background-color: $color-secondary;
+            background-color: $color-secondary;           
             
             @include responsive(phone) {
                 width: 50rem;

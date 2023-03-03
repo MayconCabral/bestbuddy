@@ -3,6 +3,29 @@
     height: 100dvh;
     background-color: $color-secondary;
 
+    &__wave {
+        position: absolute;
+        width: 100vw;
+        height: 50vh;
+        top: 0;
+        background-color: $color-secondary;
+        z-index: 30;
+    }
+
+    &__fallWave {
+        position: absolute;
+        top: -150vh;
+        width: 100vw;
+        height: 100vh;
+        background-color: $color-primary;
+
+        & > svg {
+            position: absolute;
+            bottom: -45%;          
+            
+        }
+    }
+
     &__svg {
         position: absolute;       
     }
