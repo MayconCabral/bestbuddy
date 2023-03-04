@@ -57,10 +57,18 @@
 
             @include responsive(phone) {
                 max-width: 35rem;
-            }
+            }            
 
             @include responsive(phone-ios) {
                 max-width: 18rem;
+            }
+
+            @include responsive(phone-android) {
+                max-width: 35rem;
+            }
+
+            @include responsive(phone-landscape-android) {
+                max-width: 22rem;
             }
 
             @include responsive(phone-landscape-ios) {
@@ -85,6 +93,10 @@
 
         @include responsive(tablet-landscape-ios) {
            justify-content: space-evenly;
-        }           
+        }
+        
+        @include responsive(phone-android) {
+            justify-content: space-evenly;
+        }
    }
 }

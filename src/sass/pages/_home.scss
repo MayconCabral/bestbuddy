@@ -146,7 +146,8 @@
           }
 
         @include responsive(phone-landscape-android) {
-            padding: 8rem 0rem 8rem 5rem;
+            align-self: center;
+            padding: 5rem 0rem 11rem 5rem;
         }
 
         }

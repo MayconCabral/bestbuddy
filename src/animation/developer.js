@@ -64,11 +64,12 @@ export const fade_input = {
 
 export const fade_in = {
     hidden: {
-        opacity: 1
+        opacity: 1,
+        x: '0vw'
     },
     visible: {
         opacity: 1,
-        x: '-100vw',
+        x: '-110vw',
         transition: {
             duration: 2
         }
@@ -77,11 +78,12 @@ export const fade_in = {
 
 export const fade_out = {
     hidden: {
-        opacity: 0
+        opacity: 0,        
+        x: '-110vw'
     },
     visible: {
         opacity: 1,
-        x: '150vw',        
+        x: '-110vw'             
     },   
     exit: {
         opacity: 1,

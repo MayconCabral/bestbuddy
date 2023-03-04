@@ -1,16 +1,19 @@
 .developer {
     height: 100vh;
     height: 100dvh;
-    background-color: $color-primary;
+    background-color: $color-primary;    
+    
+    &__svg {
+        position: absolute;
+        top: 0;
+    }
 
     &__fade-in {
-        @include fade;
-        right: 0;
+        @include fade;        
         background-color: $color-secondary;
     }
     &__fade-out {
-        @include fade;
-        right: 0;
+        @include fade;                
         background-color: $color-primary;        
     }
     
@@ -44,6 +47,11 @@
                 right: 8%;
         }
 
+        @include responsive(phone-android) {
+              top: 14%;
+              right: 1%;             
+        }
+
         &__picture {
             width: 40rem;
 
@@ -53,6 +61,10 @@
 
             @include responsive(phone-landscape-ios) {
                 width: 23rem;
+            }
+
+            @include responsive(phone-android) {
+                width: 40rem;
             }
         }
     }
@@ -86,6 +98,11 @@
                 left: -70%;
                 top: 10%;
             }
+
+            @include responsive(phone-android) {
+                left: -60%;
+            }
+            
         }
 
         &__picture {
@@ -111,6 +128,10 @@
 
             @include responsive(phone-landscape-ios) {
                 transform: rotate(15deg);
+            }
+
+            @include responsive(phone-android) {
+                width: 50rem;
             }
         }
     }
@@ -154,6 +175,17 @@
         }
 
         @include responsive(phone-landscape-ios) {
+            width: 100%;           
+            left: 20%;
+            bottom: 5%;          
+            column-gap: 8rem;                 
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
+            align-items: flex-end;
+        }
+
+        @include responsive(phone-landscape-android) {
             width: 100%;           
             left: 20%;
             bottom: 5%;          

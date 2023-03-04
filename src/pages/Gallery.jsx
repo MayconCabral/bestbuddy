@@ -37,7 +37,7 @@ export default function Gallery() {
             ></m.div>
             <m.div variants={fallWave} exit='exit' className="gallery__fallWave">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="100%" viewBox="0 0 5000 4666" enable-background="new 0 0 5000 4666" xmlSpace="preserve">
+	 width="100%" viewBox="0 0 5000 4666" enableBackground="new 0 0 5000 4666" xmlSpace="preserve">
 <path fill="#5594B5" opacity="1.000000" stroke="none" 
 	d="
 M11.999987,4672.000000 

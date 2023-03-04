@@ -1,7 +1,11 @@
 .gallery__nav__input {
     display: flex;
     align-items: center;
-    column-gap: 1rem;  
+    column-gap: 1rem;
+
+    @include responsive(phone-android) {
+        column-gap: 2rem;
+    }
 
     .react-datalist-input {
         &__container {
@@ -73,6 +77,10 @@
 
                 @include responsive(phone-ios) {
                     width: 20rem;
+                }
+                
+                @include responsive(phone-android) {
+                    width: 40rem;
                 }
             }            
         }

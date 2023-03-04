@@ -30,7 +30,9 @@
         @include responsive(phone-landscape-ios) {
           grid-template-rows: 0vh 50vh 40vh;
       }
-
+        @include responsive(phone-landscape-android) {
+          grid-template-rows: 0vh 50vh 40vh;
+        }
       }
    
 }

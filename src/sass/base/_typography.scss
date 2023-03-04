@@ -37,6 +37,7 @@ body {
             @include responsive(phone-ios) {
                 letter-spacing: -.1rem;
             }
+            
         }
 
         & span:first-child {
@@ -165,6 +166,11 @@ body {
              left: 30%;   
         }
 
+        @include responsive(phone-android) { 
+            width: 90%;        
+            left: 5%;
+        }
+
         &__name {
             position: absolute;
             top: -35%;
@@ -223,6 +229,10 @@ body {
                 font-size: 12rem;
             }
 
+            @include responsive(phone-android){
+                font-size: 14rem;
+            }
+
         }
         &__dev {
             position: absolute;
@@ -257,6 +267,11 @@ body {
             @include responsive(phone-landscape-ios) {
                 font-size: 4.5rem;
                 letter-spacing: 2.8rem;
+            }
+
+            @include responsive(phone-android) {
+                font-size: 6.5rem;
+                letter-spacing: 4.3rem;
             }
             
         }
