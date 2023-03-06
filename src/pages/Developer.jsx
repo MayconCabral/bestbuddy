@@ -67,7 +67,7 @@ export default function Developer() {
             exit='exit' 
             className="developer__nav"
             >
-                <Button class='btn btn-primary' text='contact me !' link='/'/>
+                <Button class='btn btn-primary' text='contact me !' link='https://www.linkedin.com/in/correiacabral/'/>
                 <Button class='btn btn-tertiary' text='home' link='/'/>            
             </m.nav>
         </main>
