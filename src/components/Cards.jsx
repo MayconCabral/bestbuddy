@@ -9,7 +9,7 @@ export default function Cards(props) {
             initial='hidden'
             animate='visible'
             exit='exit'
-        className='gallery__container__card'
+            className='gallery__container__card'
         >
             <img src={props.img} alt="" />
         </m.div>

@@ -4,10 +4,11 @@ import { AnimatePresence } from 'framer-motion';
 
 import './sass/main.scss';
 import Loader from './pages/Loading';
-import GalleryPage from './pages/Gallery';
-import DeveloperPage from './pages/Developer';
-const HomePage = React.lazy(() => import('./pages/Home'));
+import LoadingSecondary from './pages/LoadingSecondary';
 
+const HomePage = React.lazy(() => import('./pages/Home'));
+const GalleryPage = React.lazy(() => import('./pages/Gallery'));
+const DeveloperPage = React.lazy(() => import('./pages/Developer'));
 
 
 
@@ -15,14 +16,24 @@ function App() {
     const location = useLocation();
 
   return (
-    <AnimatePresence mode='wait'>
-      <Suspense fallback={<Loader />}>
+    <AnimatePresence mode='wait'>      
         <Routes key={location.pathname} location={location}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/gallery" element={<GalleryPage />} />
-            <Route path="/developer" element={<DeveloperPage />} />
-        </Routes>
-      </Suspense>   
+            <Route path="/" element={
+              <Suspense fallback={<Loader />}>
+                <HomePage />
+              </Suspense>
+            } />
+            <Route path="/gallery" element={
+              <Suspense fallback={<LoadingSecondary />}>
+                <GalleryPage />
+              </Suspense>
+            } />
+            <Route path="/developer" element={
+              <Suspense fallback={<LoadingSecondary />}>
+                <DeveloperPage />
+              </Suspense>
+            } />
+        </Routes>        
     </AnimatePresence>
   );
 }

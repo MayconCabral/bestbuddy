@@ -1,0 +1,9 @@
+.heart-loader { 
+    &__container {
+       @include heart_container;
+
+       .heart {
+           @include heart($color-primary) 
+       }
+    }
+}

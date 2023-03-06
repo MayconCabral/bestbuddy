@@ -31,7 +31,13 @@ export const cards = {
     }
   },
   exit: {
-      opacity: 0
+      opacity: 0,
+      rotate: -360,
+      x: '-50vw',
+      transition: {
+        duration: .8,
+        delay: 1.3              
+    }
   }  
 }
 
@@ -39,7 +45,8 @@ export const fallWave = {
   exit: {
     y: '150vh',
     transition: {
-      duration: 2
+      duration: 2,
+      delay: 2
     }
   }  
 }

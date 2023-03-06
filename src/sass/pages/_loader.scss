@@ -1,0 +1,25 @@
+.loader-home {
+    @include loader_page;
+    background-color: $color-primary;
+
+    &__container {
+       @include heart_container;
+
+        &__heart {
+            @include heart($color-secondary)
+        }
+    }
+}
+
+.loader-secondary {
+    @include loader_page;
+    background-color: $color-secondary;
+
+    &__container {
+       @include heart_container;
+
+        &__heart {
+            @include heart($color-primary)
+        }
+    }
+}
