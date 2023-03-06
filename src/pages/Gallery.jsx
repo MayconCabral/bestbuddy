@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { motion as m } from 'framer-motion';
 
 import Pictures from '../components/Pictures';
@@ -7,7 +7,7 @@ import Input from '../components/Input';
 import { wave, fallWave } from '../animation/gallery';
 import { btn } from '../animation/home';
 
-const HeartLoader = React.lazy(() => import('../components/HeartLoader'));
+
 
 export default function Gallery() {
     return (
@@ -108,10 +108,8 @@ z"/>
 </svg>
             </m.div>
             <svg className='gallery__svg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#5594B5" fillOpacity="1" d="M0,96L48,122.7C96,149,192,203,288,229.3C384,256,480,256,576,224C672,192,768,128,864,90.7C960,53,1056,43,1152,64C1248,85,1344,139,1392,165.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-            <div className="flex-gallery">
-				<Suspense fallback={<HeartLoader />}>
-                	<Pictures />
-				</Suspense>
+            <div className="flex-gallery">				
+				<Pictures />				
                 <m.nav 
                  variants={btn}
                  initial='hidden'
