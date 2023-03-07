@@ -24,17 +24,17 @@ function App() {
                 <HomePage />
               </Suspense>
             } />
-            <Route path="gallery" element={
+            <Route path="/gallery" element={
               <Suspense fallback={<LoadingSecondary />}>
                 <GalleryPage />
               </Suspense>
             } />
-            <Route path="developer" element={
+            <Route path="/developer" element={
               <Suspense fallback={<LoadingSecondary />}>
                 <DeveloperPage />
               </Suspense>
             } />
-            <Route path="*" element={
+            <Route path="/*" element={
               <AnimatePresence>
                 <Error key={location.pathname}/>
               </AnimatePresence>
