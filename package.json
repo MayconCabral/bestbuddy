@@ -1,6 +1,5 @@
 {
-  "name": "bestbuddy",
-  "homepage": ".",
+  "name": "bestbuddy",  
   "version": "0.1.0",
   "private": true,
   "dependencies": {
