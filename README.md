@@ -2,7 +2,7 @@
   <img width="300px" src="https://raw.githubusercontent.com/MayconCabral/bestbuddy/main/src/img/error404_low.png?token=GHSAT0AAAAAAB7S2IIBGVMHUEEP6KIDBSR6ZAJAHAQ"
 </p>
 <h1 align="center">BEST BUDDDY</h1>
-<p>Looking for a daily dose of dog cuteness? Best Buddy got you covered with over 10,000 adorable pictures! is a front-end application that consumes the Dog.Api - the internet's biggest collection of open source dog pictures. Showcasing the best images of dogs on the web while expressing the unique bond between dogs and humans.</p>
+<p>Looking for a daily dose of dog cuteness? Best Buddy got you covered with over 10,000 adorable pictures! is a front-end application that consumes the <a href="https://dog.ceo/">Dog.Api</a> - the internet's biggest collection of open source dog pictures. Showcasing the best images of dogs on the web while expressing the unique bond between dogs and humans.</p>
 <h2>Technologies Used</h2>
 <h3 align="center">Best Buddy was built using the following front-end technologies:</h3>
 <p><strong>React.js:</strong> A popular JavaScript library for building user interfaces that allowed us to create a fast and dynamic experience for users.</p>
