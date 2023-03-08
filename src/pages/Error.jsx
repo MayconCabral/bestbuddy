@@ -2,7 +2,7 @@ import { motion as m } from 'framer-motion';
 import { dog, msg, title } from '../animation/error';
 
 import Button from "../components/Button";
-import error404 from '../img/error404.png';
+import error404 from '../img/error404_low.png';
 
 export default function Error() {
     return (

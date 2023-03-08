@@ -30,7 +30,7 @@
     }
 
     &__img {
-        max-width: 40rem;
+        max-width: 40rem;        
     }
 
     &__flex-2 {
@@ -45,12 +45,16 @@
 
         h2 {
             font-family: 'Lato', sans-serif;
-            font-size: 5rem;
-            font-weight: 400;
+            font-size: 2.5rem;
+            font-weight: 700;
             text-align: center;
-            max-width: 65rem;
+            max-width: 35rem;
             color: rgba($color-white, .8);
             letter-spacing: .1rem;
+
+            @include responsive(phone) {
+                font-size: 5rem;
+            }
             
         }
 

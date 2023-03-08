@@ -35,9 +35,9 @@ function App() {
               </Suspense>
             } />
             <Route path="/*" element={
-              <AnimatePresence>
-                <Error key={location.pathname}/>
-              </AnimatePresence>
+              <Suspense fallback={<Loader />}>
+                <Error />
+              </Suspense>              
           }
         />
         </Routes>        
